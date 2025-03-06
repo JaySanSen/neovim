@@ -1,0 +1,17 @@
+q -> exit the editor
+q! -> exit without saving
+w -> save the file
+wq -> save and exit
+x -> delete the current character the cursor is on
+i -> insert test where the cursor is
+A -> append text at end of line
+dw -> deletes word from where cursor is positioned till end of the word.
+d$ -> delete entire text from cursor position till end of line.
+de -> delete till end of current word
+0 -> move to the start of a line
+$ -> move to the end of a line
+w -> move to the starting of a word and move word by word
+2w -> move the cursor 2 words forward
+e -> move to the end of the word
+3e -> move the cursor to the end of the third word forward
+d2w -> delete 2 words from current cursor position
