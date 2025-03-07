@@ -5,8 +5,8 @@ wq -> save and exit
 x -> delete the current character the cursor is on
 i -> insert test where the cursor is
 A -> append text at end of line
-dw -> deletes word from where cursor is positioned till end of the word.
-d$ -> delete entire text from cursor position till end of line.
+dw -> deletes word from where cursor is positioned till end of the word
+d$ -> delete entire text from cursor position till end of line
 de -> delete till end of current word
 0 -> move to the start of a line
 $ -> move to the end of a line
@@ -15,3 +15,20 @@ w -> move to the starting of a word and move word by word
 e -> move to the end of the word
 3e -> move the cursor to the end of the third word forward
 d2w -> delete 2 words from current cursor position
+2dd -> delete 2 lines
+u -> undo last command executed
+U -> to return line to original state
+<C-r> -> (Control + r) to redo the commands
+p -> put the line below the cursor (paste the deleted or copied line)
+rx -> replace the letter at the cursor with x
+ce -> deletes the word from cursor position till end of the word and make it INSERT mode
+c$ -> deletes from the position of the cursor till end of line
+cw -> deletes word from cursor position and makes it INSERT mode
+<C-g> to show location in a file and file status
+G -> move to a line in a file first in NORMAL mode type the number and then press G
+gg -> will move to top/first line of file
+G -> will to last line of file if number is not entered
+/ -> type / to start a search press n to cycle forward or N to cycle backward
+<C-o> -> will take you back to where you came from
+<C-i> goes forward
+% -> will find a matching parentheses
