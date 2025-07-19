@@ -1,4 +1,3 @@
-
 require("config.lazy")
 
 -- Set <space> as the leader key
@@ -10,8 +9,11 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
-vim.opt.number = true -- will show line number
-vim.opt.relativenumber = true -- will make the numbers relative for easier navigation
+-- will show line number
+vim.opt.number = true
+
+-- will make the numbers relative for easier navigation
+vim.opt.relativenumber = true
 
 -- Set Tab to 2 spaces
 vim.opt.tabstop = 2
@@ -27,13 +29,17 @@ vim.opt.shiftwidth = 2
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+
+-- will use the system clipboard. it is being scheduled because it can increase startup time
 vim.schedule(function()
-  vim.o.clipboard = 'unnamed,unnamedplus' -- will use the system clipboard. it is being scheduled because it can increase startup time
+  vim.o.clipboard = 'unnamed,unnamedplus'
 end)
 
+-- will highlight the line the cursor is currently one
+vim.opt.cursorline = true
 
-vim.opt.cursorline = true -- will highlight the line the cursor is currently one
-vim.opt.mouse = 'a' --will enable mouse
+--will enable mouse
+vim.opt.mouse = 'a'
 
 -- highlight text when copying
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -56,4 +62,5 @@ vim.opt.guicursor = {
 --	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch: block cursor with specific blinking settings
 }
 
+-- set tokyonight color theme
 vim.cmd[[colorscheme tokyonight-night]]
