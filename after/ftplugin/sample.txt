@@ -1,0 +1,2 @@
+The after directory is something that is loaded finally
+ftplugin - stands for file type plugin
