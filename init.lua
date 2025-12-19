@@ -1,5 +1,8 @@
 -- Set my colorscheme.
-vim.cmd.colorscheme 'dracula'
+vim.cmd.colorscheme 'pastelcolors'
+-- vim.cmd.colorscheme 'dracula'
+
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.uv.fs_stat(lazypath) then
     vim.fn.system {
@@ -21,6 +24,9 @@ local plugins = 'plugins'
 
 require 'settings'
 require 'keymaps'
+require 'autocmds'
+require 'statusline'
+require 'lsp'
 
 
 require('lazy').setup(plugins, {
