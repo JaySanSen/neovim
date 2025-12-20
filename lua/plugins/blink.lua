@@ -110,9 +110,9 @@ return {
       default = { "lsp", "snippets", "path", "buffer" },
     },
 
-    snippets = {
-      search_paths = { vim.fn.stdpath("config") .. "/snippets" },
-    },
+    -- snippets = {
+    --   search_paths = { vim.fn.stdpath("config") .. "/snippets" },
+    -- },
 
     -- ============================================================================================
     -- FUZZY MATCHING
