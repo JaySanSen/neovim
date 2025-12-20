@@ -98,6 +98,11 @@ vim.opt.wildignorecase = true -- Case-insensitive tab completion in commands
 -- 	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch mode
 -- }
 
+
+-- Global UI Settings
+vim.opt.winborder = "rounded";
+
+
 -- Folding Settings
 vim.opt.foldmethod = "expr" -- Use expression for folding
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- Use treesitter for folding

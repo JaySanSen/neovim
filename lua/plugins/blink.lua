@@ -53,7 +53,7 @@ return {
       -- List behavior
       list = {
         -- max_items: Limit how many items show in the menu (less clutter)
-        max_items = 10,
+        -- max_items = 10,
 
         -- selection:
         --   preselect: false = don't auto-select first item
