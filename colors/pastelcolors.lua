@@ -263,13 +263,13 @@ hi("FzfLuaBorder", { fg = c.surface2 })
 hi("FzfLuaTitle", { fg = c.lavender, bold = true })
 hi("FzfLuaPreviewTitle", { fg = c.fg })
 hi("FzfLuaCursorLine", { bg = c.surface1 })
-hi("FzfLuaSearch", { bg = "#1f1827" })
+hi("FzfLuaSearch", { fg = c.bg, bg = c.yellow, bold = true })
 
 -- =============================================================================
 -- BLINK.CMP (Completion)
 -- =============================================================================
 hi("BlinkCmpMenu", { bg = c.bg })
-hi("BlinkCmpMenuBorder", { fg = c.surface2, bg = c.bg })
+hi("BlinkCmpMenuBorder", { fg = c.mauve, bg = c.bg })
 hi("BlinkCmpLabelDescription", { fg = c.overlay0, italic = true })
 hi("BlinkCmpLabelDeprecated", { fg = c.overlay0, strikethrough = true })
 hi("BlinkCmpKindFunction", { fg = c.blue })

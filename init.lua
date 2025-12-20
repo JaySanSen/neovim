@@ -1,3 +1,7 @@
+-- Enable faster Lua module loading
+vim.loader.enable()
+
+
 -- Set my colorscheme.
 vim.cmd.colorscheme 'pastelcolors'
 -- vim.cmd.colorscheme 'dracula'

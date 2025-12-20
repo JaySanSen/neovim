@@ -46,7 +46,7 @@ return {
    cleanup_delay_ms = 2000,
 
    view_options = {
-     show_hidden = false,
+     show_hidden = true,
      natural_order = "fast",
    },
 

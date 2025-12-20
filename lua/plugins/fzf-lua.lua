@@ -154,6 +154,19 @@ return {
       git_icons = false,
     },
 
+
+    -- ============================================================================================
+    -- PREVIEWER OPTIONS
+    -- Controls the preview window appearance
+    -- ============================================================================================
+
+    previewers = {
+      builtin = {
+        cursorline = false,
+      },
+    },
+
+
     -- ============================================================================================
     -- PICKER-SPECIFIC OPTIONS
     -- Override defaults for individual pickers
