@@ -110,9 +110,13 @@ vim.keymap.set("n", "<leader>sc", "<Cmd>FzfLua commands<CR>", { desc = "[S]how [
 -- =============================================================================
 -- TERMINAL (alt+t like VS Code)
 -- =============================================================================
-vim.keymap.set("n", "<A-t>", "<Cmd>terminal<CR>", { desc = "Open terminal" })
-vim.keymap.set("t", "<A-t>", "<C-\\><C-n><Cmd>bd!<CR>", { desc = "Close terminal" })
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+  vim.keymap.set("n", "<A-t>", function()
+    require ("float_term").float_term()
+  end, { desc = "Toggle floating terminal" })
+  vim.keymap.set("t", "<A-t>", function()
+    require ("float_term").float_term()
+  end, { desc = "Toggle floating terminal" })
+
 
 -- =============================================================================
 -- GIT (alt+g like VS Code)
@@ -138,11 +142,15 @@ vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { desc = "Clear search highl
 
 
 
+vim.keymap.set("n", "<leader>lr", function()
+  local clients = vim.lsp.get_clients({ bufnr = 0 })
+  for _, client in ipairs(clients) do
+    vim.lsp.stop_client(client.id)
+  end
 
+  vim.defer_fn(function()
+    vim.cmd("edit")
+  end, 100)
+  vim.notify("LSP Restarting ... ", vim.log.levels.INFO)
+end, { desc = "LSP Restart" })
 
-  vim.keymap.set("n", "<A-t>", function()
-    require ("float_term").float_term()
-  end, { desc = "Toggle floating terminal" })
-  vim.keymap.set("t", "<A-t>", function()
-    require ("float_term").float_term()
-  end, { desc = "Toggle floating terminal" })
