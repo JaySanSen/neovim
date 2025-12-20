@@ -184,6 +184,19 @@ return {
       fd_opts = "--color=never --type f --hidden --follow --exclude .git",
     },
 
+    file_ignore_patterns = {
+      "node_modules/",
+      -- "dist/",
+      -- ".next/",
+      -- ".git/",
+      -- ".gitlab/",
+      -- "build/",
+      -- "target/",
+      -- "package-lock.json",
+      -- "pnpm-lock.yaml",
+      -- "yarn.lock",
+    },
+
     -- GREP PICKER (<leader>fg)
     -- Uses `ripgrep` (rg) for fast text searching
     grep = {
