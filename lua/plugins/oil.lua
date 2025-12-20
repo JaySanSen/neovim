@@ -1,52 +1,80 @@
 return {
   'stevearc/oil.nvim',
   opts = {
-    -- Floating window configuration
-    float = {
-      padding = 2,
-      max_width = 0.5,   -- Set the max width to 50% of the screen
-      max_height = 0.5,  -- Set the max height to 50% of the screen
-      border = "rounded", -- Optional: rounded corners for the floating window
-      win_options = {
-        winblend = 10,    -- Set the transparency of the window
-      },
+    -- Oil will handle directory buffers
+    default_file_explorer = true,
+
+    -- Send files to trash instead of permanent delete
+    delete_to_trash = true,
+
+    -- Skip confirmation for simple operations
+    skip_confirm_for_simple_edits = true,
+
+    -- Keep cursor on editable parts like file names and not the icon column
+    constrain_cursor = "editable",
+
+    -- LSP integration: auto-update imports when renaming files
+    lsp_file_methods = {
+      enabled = true,
+      timeout_ms = 1000,
+      autosave_changes = "unmodified",
     },
 
-    -- Basic file explorer settings
-    default_file_explorer = true,  -- Oil will handle directory buffers
-    columns = {
-      "icon",   -- Show file icons
-    },
 
-    -- Minimal buffer-local options
     buf_options = {
       buflisted = false,
-      bufhidden = "hide",
+      bufhidden= "hide",
     },
 
-    -- Minimal window-local options
     win_options = {
-      wrap = false,      -- Disable text wrapping
-      signcolumn = "no", -- Hide the sign column
-      cursorcolumn = false,  -- Disable cursor column highlighting
-      foldcolumn = "0",  -- Disable fold column
-      spell = false,     -- Disable spell check
-      list = false,      -- Disable list chars
-    },
+      wrap = false,
+      signcolumn = "no",
+      cursorcolumn = false,
+      foldcolumn = "0",
+      spell = false,
+      list = false,
+      conceallevel = 3,
+      concealcursor = "nvic",
+   },
 
-    -- Keymaps configuration (minimal setup)
-    keymaps = {
-      -- Keymap to close the oil window
-      ["q"] = { "actions.close", mode = "n" },   -- Close the oil window with 'q'
-    },
+   use_default_keymaps = true,
+   keymaps = {
+     ["q"] = { "actions.close", mode = "n" },
+   },
 
-    -- Automatically delete hidden buffers after a delay
-    cleanup_delay_ms = 2000,
 
-    -- Don't show hidden files by default
-    view_options = {
-      show_hidden = false,
-    },
+   cleanup_delay_ms = 2000,
+
+   view_options = {
+     show_hidden = false,
+     natural_order = "fast",
+   },
+
+   -- floating window configuration
+   float = {
+     padding = 2,
+     max_width = 0.5,
+     max_height = 0.5,
+     border = "rounded",
+     win_options = {
+       winblend = 10,
+     },
+   },
+
+
+   -- confirmation window configuration
+   confirmation = {
+     max_width = 0.4,
+     min_width = { 30, 0.3 },
+     max_height = 0.3,
+     min_height = { 30, 0.1 },
+     border = "rounded",
+     win_options = {
+       winblend = 10,
+     },
+
+   },
+
   },
 
   -- Optional dependencies

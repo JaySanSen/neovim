@@ -39,8 +39,10 @@ return {
       preset = "default",
 
       -- You can add custom keymaps on top of the preset:
-      -- ['<CR>'] = { 'accept', 'fallback' },      -- Enter to accept
+      ['<CR>'] = { 'accept', 'fallback' },      -- Enter to accept
       -- ['<Tab>'] = { 'select_next', 'fallback' }, -- Tab to go to next item
+      ['<A-.>'] = { 'select_prev', 'fallback' },      -- Enter to accept
+      ['<A-,>'] = { 'select_next', 'fallback' },      -- Enter to accept
     },
 
     -- ============================================================================================
@@ -59,17 +61,37 @@ return {
         selection = { preselect = false, auto_insert = true },
       },
 
+
+      accept = {
+        auto_brackets = { enabled = true },
+      },
+
       -- Documentation popup (shows function signatures, descriptions)
       documentation = {
         -- auto_show: true = show docs automatically when item is selected
         -- Set to false if you find it distracting
         auto_show = true,
+        auto_show_delay_ms = 200,
+        window = {
+          border = "rounded",
+        }
       },
 
       -- Menu appearance
       menu = {
         -- Hide scrollbar for cleaner look
+        border = "rounded",
         scrollbar = false,
+      },
+
+      ghost_text = { enabled = true },
+    },
+
+
+    signature = {
+      enabled = true,
+      windows = {
+        border = "rounded",
       },
     },
 

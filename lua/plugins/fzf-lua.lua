@@ -137,6 +137,10 @@ return {
 
         -- Toggle preview (fzf's native implementation)
         ["ctrl-i"] = "toggle-preview",
+
+
+        ["alt-,"] = "down",
+        ["alt-."] = "up",
       },
     },
 
