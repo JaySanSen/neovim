@@ -51,7 +51,7 @@ vim.keymap.set("n", "<leader>cs", "<Cmd>close<CR>", { desc = "[C]lose [S]plit" }
 -- WINDOW RESIZING (alt+i to increase, alt+d to decrease, or arrow keys)
 -- =============================================================================
 vim.keymap.set("n", "<A-i>", "<Cmd>resize +2<CR><Cmd>vertical resize +2<CR>", { desc = "Increase window size" })
-vim.keymap.set("n", "<A-d>", "<Cmd>resize -2<CR><Cmd>vertical resize -2<CR>", { desc = "Decrease window size" })
+vim.keymap.set("n", "<A-d>", "<Cmd>vertical resize -2<CR><Cmd>vertical resize -2<CR>", { desc = "Decrease window size" })
 vim.keymap.set("n", "<C-Up>", "<Cmd>resize +2<CR>", { desc = "Increase window height" })
 vim.keymap.set("n", "<C-Down>", "<Cmd>resize -2<CR>", { desc = "Decrease window height" })
 vim.keymap.set("n", "<C-Left>", "<Cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
@@ -141,6 +141,10 @@ vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { desc = "Clear search highl
 
 
 
+-- =============================================================================
+-- This is for stopping and restarting the LSP to detect change
+-- =============================================================================
+-- Quick config editing
 
 vim.keymap.set("n", "<leader>lr", function()
   local clients = vim.lsp.get_clients({ bufnr = 0 })

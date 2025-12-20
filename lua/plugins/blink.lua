@@ -43,6 +43,8 @@ return {
       -- ['<Tab>'] = { 'select_next', 'fallback' }, -- Tab to go to next item
       ['<A-.>'] = { 'select_prev', 'fallback' },      -- Enter to accept
       ['<A-,>'] = { 'select_next', 'fallback' },      -- Enter to accept
+      ['<Tab>'] = { 'snippet_forward', 'fallback' },
+      ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
     },
 
     -- ============================================================================================
@@ -105,7 +107,11 @@ return {
       --   path   : File/directory paths
       --   buffer : Words from current buffer
       -- NOTE: 'snippets' source removed - will be configured separately later
-      default = { "lsp", "path", "buffer" },
+      default = { "lsp", "snippets", "path", "buffer" },
+    },
+
+    snippets = {
+      search_paths = { vim.fn.stdpath("config") .. "/snippets" },
     },
 
     -- ============================================================================================

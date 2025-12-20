@@ -1,0 +1,102 @@
+{
+  "Main Function": {
+    "prefix": "main",
+    "body": "func main() {\n\t$0\n}",
+    "description": "Main function"
+  },
+  "Function": {
+    "prefix": "fn",
+    "body": "func $1($2) $3 {\n\t$0\n}",
+    "description": "Function"
+  },
+  "Method": {
+    "prefix": "meth",
+    "body": "func ($1 *$2) $3($4) $5 {\n\t$0\n}",
+    "description": "Method"
+  },
+  "If Error": {
+    "prefix": "ife",
+    "body": "if err != nil {\n\t$0\n}",
+    "description": "If error check"
+  },
+  "If Error Return": {
+    "prefix": "ifer",
+    "body": "if err != nil {\n\treturn $1err\n}$0",
+    "description": "If error return"
+  },
+  "If Error Wrap": {
+    "prefix": "ifew",
+    "body": "if err != nil {\n\treturn fmt.Errorf(\"$1: %w\", err)\n}$0",
+    "description": "If error wrap"
+  },
+  "Struct": {
+    "prefix": "st",
+    "body": "type $1 struct {\n\t$0\n}",
+    "description": "Struct"
+  },
+  "Interface": {
+    "prefix": "int",
+    "body": "type $1 interface {\n\t$0\n}",
+    "description": "Interface"
+  },
+  "For Loop": {
+    "prefix": "forl",
+    "body": "for i := 0; i < $1; i++ {\n\t$0\n}",
+    "description": "For loop"
+  },
+  "For Range": {
+    "prefix": "forr",
+    "body": "for $1, $2 := range $3 {\n\t$0\n}",
+    "description": "For range"
+  },
+  "Switch": {
+    "prefix": "sw",
+    "body": "switch $1 {\ncase $2:\n\t$0\ndefault:\n}",
+    "description": "Switch statement"
+  },
+  "Select": {
+    "prefix": "sel",
+    "body": "select {\ncase $1:\n\t$0\ndefault:\n}",
+    "description": "Select statement"
+  },
+  "Goroutine": {
+    "prefix": "go",
+    "body": "go func() {\n\t$0\n}()",
+    "description": "Goroutine"
+  },
+  "Defer": {
+    "prefix": "df",
+    "body": "defer $0",
+    "description": "Defer"
+  },
+  "Make Slice": {
+    "prefix": "mks",
+    "body": "make([]$1, $2)$0",
+    "description": "Make slice"
+  },
+  "Make Map": {
+    "prefix": "mkm",
+    "body": "make(map[$1]$2)$0",
+    "description": "Make map"
+  },
+  "Make Channel": {
+    "prefix": "mkc",
+    "body": "make(chan $1)$0",
+    "description": "Make channel"
+  },
+  "Printf": {
+    "prefix": "pf",
+    "body": "fmt.Printf(\"$1\\n\", $0)",
+    "description": "Printf"
+  },
+  "Println": {
+    "prefix": "pl",
+    "body": "fmt.Println($0)",
+    "description": "Println"
+  },
+  "Test Function": {
+    "prefix": "test",
+    "body": "func Test$1(t *testing.T) {\n\t$0\n}",
+    "description": "Test function"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": "export function $1({ $2 }: $1Props) {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n}",
+    "description": "React functional component"
+  },
+  "React Arrow Component": {
+    "prefix": "rac",
+    "body": "export const $1 = ({ $2 }: $1Props) => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n};",
+    "description": "React arrow component"
+  },
+  "useState": {
+    "prefix": "us",
+    "body": "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);$0",
+    "description": "useState hook"
+  },
+  "useEffect": {
+    "prefix": "ue",
+    "body": "useEffect(() => {\n\t$0\n}, [$1]);",
+    "description": "useEffect hook"
+  },
+  "useCallback": {
+    "prefix": "ucb",
+    "body": "const $1 = useCallback(($2) => {\n\t$0\n}, [$3]);",
+    "description": "useCallback hook"
+  },
+  "useMemo": {
+    "prefix": "um",
+    "body": "const $1 = useMemo(() => $2, [$3]);$0",
+    "description": "useMemo hook"
+  },
+  "useRef": {
+    "prefix": "ur",
+    "body": "const $1 = useRef<$2>($3);$0",
+    "description": "useRef hook"
+  },
+  "useContext": {
+    "prefix": "uc",
+    "body": "const $1 = useContext($2);$0",
+    "description": "useContext hook"
+  },
+  "Props Interface": {
+    "prefix": "propi",
+    "body": "interface $1Props {\n\t$0\n}",
+    "description": "Props interface"
+  },
+  "Div with className": {
+    "prefix": "divc",
+    "body": "<div className=\"$1\">\n\t$0\n</div>",
+    "description": "Div with className"
+  },
+  "Fragment": {
+    "prefix": "frag",
+    "body": "<>\n\t$0\n</>",
+    "description": "React fragment"
+  },
+  "Map": {
+    "prefix": "mapr",
+    "body": "{$1.map(($2) => (\n\t<$3 key={$2.$4}>\n\t\t$0\n\t</$3>\n))}",
+    "description": "Map over array"
+  },
+  "Conditional Render": {
+    "prefix": "cond",
+    "body": "{$1 && (\n\t$0\n)}",
+    "description": "Conditional render"
+  },
+  "Ternary Render": {
+    "prefix": "tern",
+    "body": "{$1 ? (\n\t$2\n) : (\n\t$0\n)}",
+    "description": "Ternary render"
+  }
+}

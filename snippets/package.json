@@ -1,0 +1,14 @@
+{
+  "name": "nvim-snippets",
+  "contributes": {
+    "snippets": [
+      { "language": "typescript", "path": "./typescript.json" },
+      { "language": "javascript", "path": "./typescript.json" },
+      { "language": "typescriptreact", "path": "./typescriptreact.json" },
+      { "language": "typescriptreact", "path": "./typescript.json" },
+      { "language": "javascriptreact", "path": "./typescriptreact.json" },
+      { "language": "javascriptreact", "path": "./typescript.json" },
+      { "language": "go", "path": "./go.json" }
+    ]
+  }
+}

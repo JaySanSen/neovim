@@ -1,0 +1,87 @@
+{
+  "Console Log": {
+    "prefix": "cl",
+    "body": "console.log($1);$0",
+    "description": "Console log"
+  },
+  "Console Log Variable": {
+    "prefix": "clv",
+    "body": "console.log('$1:', $1);$0",
+    "description": "Console log with label"
+  },
+  "Arrow Function": {
+    "prefix": "af",
+    "body": "const $1 = ($2) => {\n\t$0\n};",
+    "description": "Arrow function"
+  },
+  "Arrow Function Inline": {
+    "prefix": "afi",
+    "body": "const $1 = ($2) => $0;",
+    "description": "Inline arrow function"
+  },
+  "Async Function": {
+    "prefix": "afn",
+    "body": "async function $1($2) {\n\t$0\n}",
+    "description": "Async function"
+  },
+  "Async Arrow Function": {
+    "prefix": "aaf",
+    "body": "const $1 = async ($2) => {\n\t$0\n};",
+    "description": "Async arrow function"
+  },
+  "Try Catch": {
+    "prefix": "tc",
+    "body": "try {\n\t$1\n} catch (error) {\n\t$0\n}",
+    "description": "Try catch block"
+  },
+  "If Statement": {
+    "prefix": "iff",
+    "body": "if ($1) {\n\t$0\n}",
+    "description": "If statement"
+  },
+  "If Else": {
+    "prefix": "ife",
+    "body": "if ($1) {\n\t$2\n} else {\n\t$0\n}",
+    "description": "If else statement"
+  },
+  "For Loop": {
+    "prefix": "forl",
+    "body": "for (let i = 0; i < $1; i++) {\n\t$0\n}",
+    "description": "For loop"
+  },
+  "For Of": {
+    "prefix": "foro",
+    "body": "for (const $1 of $2) {\n\t$0\n}",
+    "description": "For of loop"
+  },
+  "Import": {
+    "prefix": "imp",
+    "body": "import { $2 } from '$1';$0",
+    "description": "Import statement"
+  },
+  "Import Default": {
+    "prefix": "impd",
+    "body": "import $2 from '$1';$0",
+    "description": "Import default"
+  },
+  "Export": {
+    "prefix": "exp",
+    "body": "export { $0 };",
+    "description": "Export statement"
+  },
+  "Export Default": {
+    "prefix": "expd",
+    "body": "export default $0;",
+    "description": "Export default"
+  },
+  "Interface": {
+    "prefix": "int",
+    "body": "interface $1 {\n\t$0\n}",
+    "description": "Interface"
+  },
+  "Type": {
+    "prefix": "typ",
+    "body": "type $1 = $0;",
+    "description": "Type alias"
+  }
+}
