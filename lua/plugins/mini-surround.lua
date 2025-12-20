@@ -1,6 +1,6 @@
-return {
-  'nvim-mini/mini.surround',
-  version = '*',
-  event = 'VeryLazy',
-  opts = {},
-}
+ return {
+--   'nvim-mini/mini.surround',
+--   version = '*',
+--   event = 'VeryLazy',
+--   opts = {},
+ }
