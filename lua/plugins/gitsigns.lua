@@ -92,6 +92,8 @@ return {
       gitsigns.blame_line({ full = true })
     end, { desc = "[H]unk [B]lame Line"})
 
+    -- map('n', '<leader>hB', gitsigns.blame, { desc = "[H]unk [B]lame Buffer"})
+
     map('n', '<leader>hd', gitsigns.diffthis, { desc = "[H]unk [D]iff"})
 
     map('n', '<leader>hD', function()

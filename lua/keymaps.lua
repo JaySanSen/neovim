@@ -1,6 +1,5 @@
 -- ================================================================================================
 -- TITLE: NeoVim keymaps
--- ABOUT: Keymaps matching VS Code setup + Neovim quality-of-life
 -- ================================================================================================
 
 -- =============================================================================
@@ -41,7 +40,7 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
 -- =============================================================================
--- WINDOW SPLITTING (like VS Code space s v / space s d)
+-- WINDOW SPLITTING
 -- =============================================================================
 vim.keymap.set("n", "<leader>sv", "<Cmd>vsplit<CR>", { desc = "[S]plit [V]ertical" })
 vim.keymap.set("n", "<leader>sd", "<Cmd>split<CR>", { desc = "[S]plit [D]own (horizontal)" })
@@ -65,7 +64,7 @@ vim.keymap.set("n", "<leader>bp", "<Cmd>bprevious<CR>", { desc = "[B]uffer [P]re
 vim.keymap.set("n", "<leader>ct", "<Cmd>bdelete<CR>", { desc = "[C]lose [T]ab/buffer" })
 
 -- =============================================================================
--- LSP KEYMAPS (like VS Code space g h/d/r/i)
+-- LSP KEYMAPS
 -- =============================================================================
 vim.keymap.set("n", "<leader>gh", vim.lsp.buf.hover, { desc = "[G]lance [H]over" })
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "[G]oto [D]efinition" })
@@ -77,25 +76,25 @@ vim.keymap.set("n", "<leader>fq", vim.lsp.buf.code_action, { desc = "[F]ix [Q]ui
 vim.keymap.set("n", "<leader>fd", function() vim.lsp.buf.format({ async = true }) end, { desc = "[F]ormat [D]ocument" })
 
 -- =============================================================================
--- DIAGNOSTICS (like VS Code space g p/n)
+-- DIAGNOSTICS
 -- =============================================================================
 vim.keymap.set("n", "<leader>gp", vim.diagnostic.goto_prev, { desc = "[G]oto [P]rev diagnostic" })
 vim.keymap.set("n", "<leader>gn", vim.diagnostic.goto_next, { desc = "[G]oto [N]ext diagnostic" })
 vim.keymap.set("n", "<leader>gl", vim.diagnostic.open_float, { desc = "[G]et [L]ine diagnostic" })
 
 -- =============================================================================
--- NAVIGATION HISTORY (like VS Code space g b/f)
+-- NAVIGATION HISTORY
 -- =============================================================================
 vim.keymap.set("n", "<leader>gb", "<C-o>", { desc = "[G]o [B]ack" })
 vim.keymap.set("n", "<leader>gf", "<C-i>", { desc = "[G]o [F]orward" })
 
 -- =============================================================================
--- FOLDING (like VS Code space f c)
+-- FOLDING
 -- =============================================================================
 vim.keymap.set("n", "<leader>fc", "za", { desc = "[F]old [C]ode toggle" })
 
 -- =============================================================================
--- SEARCH / FIND (fzf-lua bindings - like VS Code space f f, space e s, etc.)
+-- SEARCH / FIND
 -- These require fzf-lua plugin to be installed
 -- =============================================================================
 vim.keymap.set("n", "<leader>ff", "<Cmd>FzfLua files<CR>", { desc = "[F]ind [F]iles" })
@@ -108,7 +107,7 @@ vim.keymap.set("n", "<leader>ws", "<Cmd>FzfLua lsp_workspace_symbols<CR>", { des
 vim.keymap.set("n", "<leader>sc", "<Cmd>FzfLua commands<CR>", { desc = "[S]how [C]ommands" })
 
 -- =============================================================================
--- TERMINAL (alt+t like VS Code)
+-- TERMINAL (ALT+t )
 -- =============================================================================
   vim.keymap.set("n", "<A-t>", function()
     require ("float_term").float_term()
@@ -119,7 +118,7 @@ vim.keymap.set("n", "<leader>sc", "<Cmd>FzfLua commands<CR>", { desc = "[S]how [
 
 
 -- =============================================================================
--- GIT (alt+g like VS Code)
+-- GIT (ALT+g)
 -- These require gitsigns or fugitive plugin
 -- =============================================================================
 vim.keymap.set("n", "<A-g>", "<Cmd>FzfLua git_status<CR>", { desc = "Git status" })
@@ -156,5 +155,5 @@ vim.keymap.set("n", "<leader>lr", function()
     vim.cmd("edit")
   end, 100)
   vim.notify("LSP Restarting ... ", vim.log.levels.INFO)
-end, { desc = "LSP Restart" })
+end, { desc = "[L]SP [R]estart" })
 
