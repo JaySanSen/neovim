@@ -118,6 +118,10 @@ end
 -- DIAGNOSTIC CONFIGURATION
 -- How errors, warnings, hints are displayed
 -- ================================================================================================
+
+local icons = require("icons").diagnostics
+
+
 vim.diagnostic.config({
   -- Virtual text: the inline text shown at the end of lines with issues
   virtual_text = {
@@ -144,10 +148,15 @@ vim.diagnostic.config({
   -- Using simple text characters instead of icons
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = "E",
-      [vim.diagnostic.severity.WARN] = "W",
-      [vim.diagnostic.severity.INFO] = "I",
-      [vim.diagnostic.severity.HINT] = "H",
+     -- [vim.diagnostic.severity.ERROR] = "E",
+     -- [vim.diagnostic.severity.WARN] = "W",
+     -- [vim.diagnostic.severity.INFO] = "I",
+     -- [vim.diagnostic.severity.HINT] = "H",
+
+      [vim.diagnostic.severity.ERROR] = icons.ERROR,
+      [vim.diagnostic.severity.WARN] = icons.WARN,
+      [vim.diagnostic.severity.INFO] = icons.INFO,
+      [vim.diagnostic.severity.HINT] = icons.HINT,
     },
   },
 })

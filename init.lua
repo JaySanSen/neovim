@@ -3,7 +3,8 @@ vim.loader.enable()
 
 
 -- Set my colorscheme.
-vim.cmd.colorscheme 'pastelcolors'
+-- vim.cmd.colorscheme 'pastelcolors'
+vim.cmd.colorscheme 'vhs'
 -- vim.cmd.colorscheme 'dracula'
 
 

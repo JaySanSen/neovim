@@ -133,6 +133,7 @@ return {
       -- 'mono' for Nerd Font Mono, 'normal' for regular Nerd Font
       -- Affects icon spacing
       nerd_font_variant = "mono",
+      kind_icons = require("icons").symbol_kinds;
     },
 
     -- ============================================================================================
