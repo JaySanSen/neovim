@@ -108,14 +108,14 @@ end
 -- GIT COMPONENT
 -- Shows current branch (requires gitsigns)
 -- =============================================================================
-function M.git_component()
-  local head = vim.b.gitsigns_head
-  if not head or head == "" then
-    return ""
-  end
-
-  return string.format(" %s %s", icons.misc.git, head)
-end
+-- function M.git_component()
+--   local head = vim.b.gitsigns_head
+--   if not head or head == "" then
+--     return ""
+--   end
+--
+--   return string.format(" %s %s", icons.misc.git, head)
+-- end
 
 -- =============================================================================
 -- LSP PROGRESS COMPONENT
@@ -246,7 +246,7 @@ function M.render()
   -- Left side
   local left = table.concat({
     M.mode_component(),
-    M.git_component(),
+    -- M.git_component(),
     "  ",
     M.lsp_progress_component(),
   })
