@@ -7,6 +7,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+
+vim.g.loaded_matchparen = 1 -- Disable matching brackets highlight
+
 -- Basic Settings
 vim.opt.number = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers
