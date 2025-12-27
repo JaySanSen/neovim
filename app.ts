@@ -13,4 +13,3 @@ const sample = (): string => {
 
 };
 console.log(consoleString.toLocaleUpperCase("o"));
-
