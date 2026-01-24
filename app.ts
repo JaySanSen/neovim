@@ -12,3 +12,4 @@ console.log(consoleString.endsWith("o"));
 const sample = (): string => {
 };
 console.log(consoleString.toLocaleUpperCase("o"));
+console.log(consoleString.toLocaleUpperCase("o"));

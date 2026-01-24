@@ -30,7 +30,7 @@ local plugins = 'plugins'
 require 'settings'
 require 'keymaps'
 require 'autocmds'
-require 'statusline'
+-- require 'statusline'
 require 'lsp'
 
 
