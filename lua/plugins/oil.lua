@@ -78,7 +78,7 @@ return {
   },
 
   -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" }, -- Use nvim-web-devicons if you want file icons
+  dependencies = { "nvim-mini/mini.icons" }, -- Use mini-icons if you want file icons
 
   -- Lazy loading is not recommended because it is tricky to make it work correctly in all situations
   lazy = false,

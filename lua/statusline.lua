@@ -205,9 +205,9 @@ function M.filetype_component()
     return "[No Name]"
   end
 
-  -- Try to get icon from nvim-web-devicons
+  -- Try to get icon from nvim-web-devicons / nvim-mini/mini.icons
   local icon, icon_hl = "", "StatusLine"
-  local ok, devicons = pcall(require, "nvim-web-devicons")
+  local ok, devicons = pcall(require, "mini.icons")
   if ok then
     local buf_name = vim.api.nvim_buf_get_name(0)
     local name = vim.fn.fnamemodify(buf_name, ":t")
